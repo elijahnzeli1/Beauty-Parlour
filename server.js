@@ -15,14 +15,14 @@ app.get('*.js', function (req, res, next) {
 });
 
 // Configure the Mailgun SMTP transport
-const transporter = nodemailer.createTransport(smtpTransport({
-  host: 'smtp.mailgun.org',
-  port: 587,
-  auth: {
-    user: 'postmaster@sandbox7f6e63e70cce483491050af6ad4de305.mailgun.org', // Replace with your Mailgun SMTP username
-    pass: 'c19c5a632b72c796218cb23334f7ce4c-a4da91cf-337b3628' // Replace with your Mailgun SMTP password
-  }
-}));
+// const transporter = nodemailer.createTransport(smtpTransport({
+//   host: 'smtp.mailgun.org',
+//   port: 587,
+//   auth: {
+//     user: '', // Replace with your Mailgun SMTP username
+//     pass: '' // Replace with your Mailgun SMTP password
+//   }
+// }));
 
 app.post('/book-appointment', async (req, res) => {
   const bookingData = req.body;
